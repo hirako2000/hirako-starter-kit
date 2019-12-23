@@ -33,8 +33,8 @@ A start kit for building web apps using express, marko, mongoose and passport.
 
 ```sh
 git clone https://github.com/hirako2000/hirako-starter-kit.git
-cd node-express-mongoose
-npm install
+cd hirako-starter-kit
+npm install # this will take a while depending on your internet bandwith
 cp .env.example .env
 npm start # Your default browser will open and load the root page
 ```
