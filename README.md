@@ -32,7 +32,7 @@ A start kit for building web apps using express, marko, mongoose and passport.
 ## Launch
 
 ```sh
-git clone https://github.com/madhums/node-express-mongoose.git
+git clone https://github.com/hirako2000/hirako-starter-kit.git
 cd node-express-mongoose
 npm install
 cp .env.example .env
