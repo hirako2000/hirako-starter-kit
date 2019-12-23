@@ -1,0 +1,8 @@
+node_modules
+.vscode
+.git
+public
+data
+config/static/
+*.marko.js
+*.marko.init

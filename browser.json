@@ -1,0 +1,8 @@
+{
+  "dependencies": [
+    "basscss/css/basscss.css",
+    "basscss-btn/css/btn.css",
+    "public/css/styles.less",
+    "jquery/dist/jquery.slim.min.js"
+  ]
+}

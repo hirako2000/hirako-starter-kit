@@ -1,0 +1,91 @@
+{
+  "name": "hirako-starter-kit",
+  "description": "A starter kit to build server application for node.js, markojs, express and mongo",
+  "version": "0.1.0",
+  "author": {
+    "name": "Hirako San",
+    "email": "hirako2000@gmail.com"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=10.x"
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=development browser-refresh server.js",
+    "test": "cross-env NODE_ENV=test jest --coverage",
+    "just-test": "cross-env NODE_ENV=test jest --coverage",
+    "pretest": "eslint .",
+    "prod": "pm2-runtime start ecosystem.config.js --env production"
+  },
+  "dependencies": {
+    "@lasso/marko-taglib": "^1.0.15",
+    "@wesleytodd/openapi": "0.0.8",
+    "acorn": "^7.1.0",
+    "basscss": "^8.1.0",
+    "basscss-btn": "^1.1.1",
+    "body-parser": "~1.19.0",
+    "browser-refresh-taglib": "^1.1.0",
+    "co": "~4.6.0",
+    "compression": "~1.7.4",
+    "connect-flash": "~0.1.1",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "~1.4.4",
+    "cross-env": "^6.0.3",
+    "csurf": "1.10.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "helmet": "^3.21.2",
+    "jquery": "^3.4.1",
+    "lasso": "^3.3.1",
+    "lasso-less": "^3.0.2",
+    "lasso-marko": "^2.4.8",
+    "lumie": "^0.1.2",
+    "marko": "^4.18.28",
+    "method-override": "~3.0.0",
+    "mongoose": "^5.8.1",
+    "morgan": "~1.9.1",
+    "passport": "^0.4.1",
+    "passport-local": "~1.0.0",
+    "passport-local-mongoose": "^5.0.1",
+    "pm2": "^4.2.1",
+    "view-helpers": "~0.2.0",
+    "winston": "~3.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@marko/jest": "^2.1.0",
+    "@marko/testing-library": "^3.0.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "babel-tape-runner": "~3.0.0",
+    "browser-refresh": "^1.7.3",
+    "eslint": "~5.16.0",
+    "eslint-config-prettier": "~4.3.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^24.9.0",
+    "jest-dom": "^4.0.0",
+    "nodemon": "1.19.0",
+    "npm-check-updates": "^4.0.1",
+    "prettier": "^1.19.1",
+    "supertest": "^4.0.2",
+    "tape": "^4.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/madhums/node-express-mongoose.git"
+  },
+  "keywords": [
+    "node",
+    "mongoose",
+    "express",
+    "markojs",
+    "basscss",
+    "openapi",
+    "swagger",
+    "redoc",
+    "passport"
+  ]
+}

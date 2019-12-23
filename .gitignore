@@ -1,0 +1,9 @@
+node_modules
+npm-debug.log
+.env
+data
+.vscode
+.cache
+*.marko.js
+config/static
+coverage

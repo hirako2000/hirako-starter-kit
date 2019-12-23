@@ -1,0 +1,32 @@
+<lasso-page package-path="../../browser.json"/>
+
+<!doctype html>
+<html lang="en">
+  <head>
+      <title>MEAN</title>
+      <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png" />
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <meta name="Description" content="something fun" />
+      <script>
+          var scalingBodyFont = false;
+
+          function scaleBodyFont() {
+              var height = Math.max(window.outerHeight, window.screen.height);
+              document.documentElement.style.fontSize = Math.pow(Math.min(window.innerWidth, height), 0.25)*19+'%';
+              scalingBodyFont = false;
+          }
+
+          window.addEventListener('resize', function() {
+              requestAnimationFrame(scaleBodyFont);
+          });
+
+          scaleBodyFont();
+      </script>
+      <lasso-head/>
+  </head>
+  <body>
+    <site-header/>
+    <dashboard/>
+    <browser-refresh enabled="true"/>
+  </body>
+</html>
