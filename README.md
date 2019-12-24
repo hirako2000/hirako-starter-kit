@@ -22,6 +22,9 @@
   <a href="./License.md">
     <img src="https://img.shields.io/npm/l/slate.svg?maxAge=300">
   </a>
+  <a href="https://www.codacy.com/manual/hirako2000/hirako-starter-kit">
+    <img src="https://api.codacy.com/project/badge/Grade/1cca597cc64f4d9d97b2a1682ec65f7a">
+  </a>
 </p>
 
 <br/>
