@@ -13,7 +13,7 @@ const port = process.env.PORT || 3000;
 
 const app = express();
 const connection = connect();
-const server = null;
+let server = null;
 
 module.exports = {
   app,
