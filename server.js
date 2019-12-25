@@ -13,10 +13,12 @@ const port = process.env.PORT || 3000;
 
 const app = express();
 const connection = connect();
+const server = null;
 
 module.exports = {
   app,
-  connection
+  connection,
+  close
 };
 
 // Bootstrap models
@@ -36,7 +38,7 @@ connection
 
 function listen() {
   if (app.get('env') === 'test') return;
-  app.listen(port);
+  server = app.listen(port);
   console.log('Server started - Listening on port ' + port);
   if (process.send) {
     // Informs browser-refresh that the server is online
@@ -53,4 +55,13 @@ function connect() {
   };
   mongoose.connect(config.db, options);
   return mongoose.connection;
+}
+
+function close() {
+  if (server) {
+    server.close(() => {
+      console.log('Http server closed.');
+    });
+  }
+  if (mongoose) mongoose.disconnect();
 }
