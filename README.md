@@ -91,6 +91,7 @@ When incorporating a design pattern, library or framework, the question is how d
 - CSS foundation with [Basscss](https://basscss.com/)
 - [LessCSS](http://lesscss.org/) support
 - Front end asset bundling and serving with [Lasso](https://github.com/lasso-js/lasso)
+- Auto recompile and browser autorefresh with [browser-refresh](https://github.com/patrick-steele-idem/browser-refresh)
 - Linting with [ESLint](https://github.com/eslint/eslint)
 - HTTP Logging with [Morgan](https://github.com/expressjs/morgan)
 - Auto generated [Open API](https://github.com/OAI/OpenAPI-Specification) and [ReDoc](https://github.com/Redocly/redoc)/[Swagger UI](https://github.com/swagger-api/swagger-ui) documentation
