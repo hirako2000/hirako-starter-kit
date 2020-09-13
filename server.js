@@ -27,8 +27,8 @@ fs.readdirSync(models)
   .forEach(file => require(join(models, file)));
 
 // Bootstrap routes
-require('./config/passport')(passport);
 require('./config/express')(app, passport);
+//require('./config/passport')(passport);
 require('./config/routes')(app, passport);
 
 connection
@@ -51,7 +51,10 @@ function connect() {
     keepAlive: 1,
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useCreateIndex: true
+    useCreateIndex: true,
+    server: {
+      sslValidate: false
+    }
   };
   mongoose.connect(config.db, options);
   return mongoose.connection;
