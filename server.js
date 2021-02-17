@@ -52,9 +52,7 @@ function connect() {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
-    server: {
-      sslValidate: false,
-    },
+    sslValidate: false, // better set to true. it is false to avoid POC progress
   };
   mongoose.connect(config.db, options);
   return mongoose.connection;
