@@ -136,9 +136,9 @@ npm install --save-dev typescript
 ```
 
 ```javascript
-const lodash = require('lodash');
+const lodash = require("lodash");
 // or
-import lodash from 'lodash';
+import lodash from "lodash";
 ```
 
 ### Browser

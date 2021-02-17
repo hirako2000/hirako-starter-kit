@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: ./docker/node/Dockerfile
     volumes:
-    # https://stackoverflow.com/a/32785014/232619
+      # https://stackoverflow.com/a/32785014/232619
       - .:/app
       - /app/node_modules
     command: /usr/local/wait-for-it.sh mongo:27017 -- npm start

@@ -9,7 +9,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -39,7 +39,7 @@ a {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 50px 1fr 50px;
-  grid-template-areas: 'header' 'main' 'footer';
+  grid-template-areas: "header" "main" "footer";
   height: 100vh;
   overflow-x: hidden;
 }
@@ -82,7 +82,7 @@ a {
   border: none;
 }
 .header__avatar {
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1609106/headshot.png');
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1609106/headshot.png");
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50%;
@@ -95,7 +95,7 @@ a {
 }
 .header__avatar:after {
   position: absolute;
-  content: '';
+  content: "";
   width: 6px;
   height: 6px;
   background: none;
@@ -142,7 +142,7 @@ a {
 }
 .dropdown:before {
   position: absolute;
-  content: '';
+  content: "";
   top: -6px;
   right: 30px;
   width: 0;
@@ -205,7 +205,7 @@ a {
   background-color: rgba(255, 255, 255, 0.1);
 }
 .sidenav__profile-avatar {
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1609106/headshot.png');
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1609106/headshot.png");
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50%;
@@ -220,7 +220,7 @@ a {
 }
 .sidenav__arrow {
   position: absolute;
-  content: '';
+  content: "";
   width: 6px;
   height: 6px;
   top: 50%;
@@ -275,7 +275,7 @@ a {
 }
 .navList__subheading:after {
   position: absolute;
-  content: '';
+  content: "";
   height: 6px;
   width: 6px;
   top: 17px;
@@ -342,7 +342,7 @@ a {
   height: 250px;
   color: #fff;
   background-size: cover;
-  background-image: url('../../public/img/lanscape.jpg');
+  background-image: url("../../public/img/lanscape.jpg");
   margin-bottom: 20px;
 }
 .main-header__intro-wrapper {
@@ -481,7 +481,7 @@ a {
   background-color: #fff;
 }
 .card__main:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 120px;
@@ -498,7 +498,7 @@ a {
   background-color: #fff;
 }
 .card__photo {
-  background-image: url('../../public/img/landscape.jpg');
+  background-image: url("../../public/img/landscape.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: slategray;
@@ -525,7 +525,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  content: '';
+  content: "";
   width: 30px;
   height: 30px;
   top: 0;
@@ -626,7 +626,7 @@ a {
 .document__img {
   width: 105px;
   height: 136px;
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1609106/doc-1.png');
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1609106/doc-1.png");
   background-size: cover;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
@@ -677,7 +677,7 @@ a {
     display: grid;
     grid-template-columns: 240px calc(100% - 240px);
     grid-template-rows: 50px 1fr 50px;
-    grid-template-areas: 'sidenav header' 'sidenav main' 'sidenav footer';
+    grid-template-areas: "sidenav header" "sidenav main" "sidenav footer";
     height: 100vh;
   }
 
