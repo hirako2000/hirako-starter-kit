@@ -802,7 +802,7 @@ a {
   .main-header__intro-wrapper {
     flex-direction: row;
   }
-  
+
   .main-header__welcome {
     align-items: flex-start;
   }
