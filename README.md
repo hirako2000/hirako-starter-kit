@@ -40,6 +40,7 @@ cd hirako-starter-kit
 npm install # this will take a while depending on your internet bandwith
 cp .env.example .env
 npm start # Your default browser will open and load the root page
+npm run start:dev # Same, but for dev, auto refresh on saving code change
 ```
 
 ## Design Philosophy
@@ -98,7 +99,7 @@ When incorporating a design pattern, library or framework, the question is how d
 - Unit test context with [SuperTest](https://github.com/visionmedia/supertest) and cases with [Jest](https://github.com/facebook/jest)
 - Continuous integration with [Travis CI](https://github.com/travis-ci/travis-ci)
 - Production instance mgt with [pm2](https://github.com/Unitech/pm2)
-- Devop deployment with [Docker Compose](https://github.com/docker/compose)
+- Devops deployment with [Docker Compose](https://github.com/docker/compose)
 
 ## Roadmap
 
