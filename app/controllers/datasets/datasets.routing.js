@@ -1,40 +1,40 @@
-const { create, getOne, getAll } = require("./datasets.js");
-const openapi = require("@wesleytodd/openapi");
+const { create, getOne, getAll } = require('./datasets.js');
+const openapi = require('@wesleytodd/openapi');
 
 const oapi = openapi({
   tags: [
     {
-      name: "datasets",
-      description: "Operations on datasets",
+      name: 'datasets',
+      description: 'Operations on datasets',
     },
   ],
 });
 
 const getOneDoc = oapi.path({
-  tags: ["datasets"],
-  description: "Get a single dataset",
+  tags: ['datasets'],
+  description: 'Get a single dataset',
   responses: {
     200: {
-      description: "Successful response",
+      description: 'Successful response',
       content: {
-        "application/json": {
+        'application/json': {
           schema: {
-            type: "object",
+            type: 'object',
             properties: {
-              dataset: { type: "Object" },
+              dataset: { type: 'Object' },
             },
           },
         },
       },
     },
     404: {
-      description: "Dataset not found, you may not have access to it",
+      description: 'Dataset not found, you may not have access to it',
       content: {
-        "application/json": {
+        'application/json': {
           schema: {
-            type: "object",
+            type: 'object',
             properties: {
-              error: { type: "string" },
+              error: { type: 'string' },
             },
           },
         },
@@ -44,17 +44,17 @@ const getOneDoc = oapi.path({
 });
 
 const getAllDocs = oapi.path({
-  tags: ["datasets"],
-  description: "Get all datasets",
+  tags: ['datasets'],
+  description: 'Get all datasets',
   responses: {
     200: {
-      description: "Successful response",
+      description: 'Successful response',
       content: {
-        "application/json": {
+        'application/json': {
           schema: {
-            type: "object",
+            type: 'object',
             properties: {
-              datasets: { type: "array" },
+              datasets: { type: 'array' },
             },
           },
         },
@@ -64,22 +64,22 @@ const getAllDocs = oapi.path({
 });
 
 module.exports = {
-  "/": {
+  '/': {
     post: {
       action: create,
-      level: "public",
+      level: 'public',
     },
     get: {
       middlewares: getAllDocs,
       action: getAll,
-      level: "public",
+      level: 'public',
     },
   },
-  "/:id": {
+  '/:id': {
     get: {
       middlewares: getOneDoc,
       action: getOne,
-      level: "public",
+      level: 'public',
     },
   },
 };

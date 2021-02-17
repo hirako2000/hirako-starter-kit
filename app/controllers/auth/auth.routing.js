@@ -1,47 +1,47 @@
-const { login, signup, logout } = require("./auth.js");
-const openapi = require("@wesleytodd/openapi");
-const passport = require("passport");
+const { login, signup, logout } = require('./auth.js');
+const openapi = require('@wesleytodd/openapi');
+const passport = require('passport');
 
 const oapi = openapi({
   tags: [
     {
-      name: "auth",
-      description: "Operations on auth",
+      name: 'auth',
+      description: 'Operations on auth',
     },
   ],
 });
 
 const requestInvalidResponse = {
   schema: {
-    type: "object",
+    type: 'object',
     properties: {
-      error: "string",
+      error: 'string',
     },
   },
   example: {
-    error: "Input request invalid",
+    error: 'Input request invalid',
   },
 };
 
 const loginDoc = oapi.path({
-  tags: ["auth"],
-  description: "Login",
+  tags: ['auth'],
+  description: 'Login',
   requestBody: {
     content: {
-      "application/json": {
+      'application/json': {
         schema: {
-          type: "object",
-          required: ["username", "password"],
+          type: 'object',
+          required: ['username', 'password'],
           properties: {
-            username: { type: "string" },
-            password: { type: "string" },
+            username: { type: 'string' },
+            password: { type: 'string' },
           },
         },
         examples: {
           minimal: {
             value: {
-              username: "user",
-              password: "pass123",
+              username: 'user',
+              password: 'pass123',
             },
           },
         },
@@ -50,43 +50,43 @@ const loginDoc = oapi.path({
   },
   responses: {
     200: {
-      description: "Logged in",
+      description: 'Logged in',
       content: {
-        "application/json": {
+        'application/json': {
           schema: {
-            type: "object",
+            type: 'object',
             properties: {
-              username: "string",
-              email: "string",
-              description: "string",
+              username: 'string',
+              email: 'string',
+              description: 'string',
             },
           },
           example: {
-            username: "user",
-            email: "user@example.com",
-            description: "A not so mysterious user",
+            username: 'user',
+            email: 'user@example.com',
+            description: 'A not so mysterious user',
           },
         },
       },
     },
     400: {
-      description: "Request invalid",
+      description: 'Request invalid',
       content: {
-        "application/json": requestInvalidResponse,
+        'application/json': requestInvalidResponse,
       },
     },
     401: {
-      description: "Credentials invalid",
+      description: 'Credentials invalid',
       content: {
-        "application/json": {
+        'application/json': {
           schema: {
-            type: "object",
+            type: 'object',
             properties: {
-              error: "string",
+              error: 'string',
             },
           },
           example: {
-            error: "Username or password invalid",
+            error: 'Username or password invalid',
           },
         },
       },
@@ -95,36 +95,36 @@ const loginDoc = oapi.path({
 });
 
 const signupDoc = oapi.path({
-  tags: ["auth"],
-  description: "Signs up",
+  tags: ['auth'],
+  description: 'Signs up',
   requestBody: {
     content: {
-      "application/json": {
+      'application/json': {
         schema: {
-          type: "object",
-          required: ["username", "password"],
+          type: 'object',
+          required: ['username', 'password'],
           properties: {
-            username: { type: "string" },
-            password: { type: "string" },
-            name: { type: "string" },
-            email: { type: "string" },
-            description: { type: "string" },
+            username: { type: 'string' },
+            password: { type: 'string' },
+            name: { type: 'string' },
+            email: { type: 'string' },
+            description: { type: 'string' },
           },
         },
         examples: {
           minimal: {
             value: {
-              username: "user",
-              password: "pass123",
+              username: 'user',
+              password: 'pass123',
             },
           },
           extended: {
             value: {
-              username: "user",
-              password: "pass123",
-              name: "John Doe",
-              email: "user@example.com",
-              description: "A not so mysterious user",
+              username: 'user',
+              password: 'pass123',
+              name: 'John Doe',
+              email: 'user@example.com',
+              description: 'A not so mysterious user',
             },
           },
         },
@@ -133,45 +133,45 @@ const signupDoc = oapi.path({
   },
   responses: {
     200: {
-      description: "Signed up",
+      description: 'Signed up',
       content: {
-        "application/json": {
+        'application/json': {
           schema: {
-            type: "object",
+            type: 'object',
             properties: {
-              username: "string",
-              name: "string",
-              email: "string",
-              description: "string",
+              username: 'string',
+              name: 'string',
+              email: 'string',
+              description: 'string',
             },
           },
           example: {
-            username: "user",
-            name: "John doe",
-            email: "user@example.com",
-            description: "A not so mysterious user",
+            username: 'user',
+            name: 'John doe',
+            email: 'user@example.com',
+            description: 'A not so mysterious user',
           },
         },
       },
     },
     400: {
-      description: "Request invalid",
+      description: 'Request invalid',
       content: {
-        "application/json": requestInvalidResponse,
+        'application/json': requestInvalidResponse,
       },
     },
     422: {
-      description: "username already exists",
+      description: 'username already exists',
       content: {
-        "application/json": {
+        'application/json': {
           schema: {
-            type: "object",
+            type: 'object',
             properties: {
-              error: "string",
+              error: 'string',
             },
           },
           example: {
-            error: "username already exists",
+            error: 'username already exists',
           },
         },
       },
@@ -180,21 +180,21 @@ const signupDoc = oapi.path({
 });
 
 const logoutDoc = oapi.path({
-  tags: ["auth"],
-  description: "Logout",
+  tags: ['auth'],
+  description: 'Logout',
   responses: {
     200: {
-      description: "Logged out",
+      description: 'Logged out',
       content: {
-        "application/json": {
+        'application/json': {
           schema: {
-            type: "object",
+            type: 'object',
             properties: {
-              message: "string",
+              message: 'string',
             },
           },
           example: {
-            message: "Logged out",
+            message: 'Logged out',
           },
         },
       },
@@ -203,25 +203,25 @@ const logoutDoc = oapi.path({
 });
 
 module.exports = {
-  "/login": {
+  '/login': {
     post: {
-      middlewares: [loginDoc, passport.authenticate("local")],
+      middlewares: [loginDoc, passport.authenticate('local')],
       action: login,
-      level: "public",
+      level: 'public',
     },
   },
-  "/signup": {
+  '/signup': {
     post: {
       middlewares: signupDoc,
       action: signup,
-      level: "public",
+      level: 'public',
     },
   },
-  "/logout": {
+  '/logout': {
     get: {
       middlewares: logoutDoc,
       action: logout,
-      level: "public",
+      level: 'public',
     },
   },
 };

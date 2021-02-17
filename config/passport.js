@@ -1,4 +1,4 @@
-const User = require("../app/models/user");
+const User = require('../app/models/user');
 
 module.exports = function (passport) {
   // serialize and deserialize sessions
