@@ -34,7 +34,6 @@ module.exports.signup = (req, res) => {
     req.body.password,
     function (err) {
       if (err) {
-        console.log("error during user signup!", err);
         return res.status(422).json({
           message: "username already exists",
         });

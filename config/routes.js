@@ -16,7 +16,6 @@ module.exports = function (app) {
     ) {
       return next();
     }
-    console.error(err.stack);
     // error page
     res.marko(template500);
   });
