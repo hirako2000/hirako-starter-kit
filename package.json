@@ -22,7 +22,7 @@
     "@lasso/marko-taglib": "^1.0.15",
     "@wesleytodd/openapi": "0.1.0",
     "acorn": "^8.0.5",
-    "axios": "^0.21.1",
+    "axios": "^1.6.0",
     "basscss": "^8.1.0",
     "basscss-btn": "^1.1.1",
     "body-parser": "~1.19.0",
